@@ -4,7 +4,6 @@
 .vscode
 
 # Folders
-public
 dist
 vendor
 node_modules

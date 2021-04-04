@@ -11,4 +11,4 @@
 Type '"update"' is not comparable to type '"message" | "next" | "prev" | "restart" | "theme" | "timer"'.
 ```
 
-Эта ошибка связана с тем, что в файле `src/application/actions.ts` при экспорте типа `Action` не был добавлен тип, возвращаемый из функции `actionUpdate`.
+Эта ошибка связана с тем, что в файле `src/application/actions.ts` при экспорте типа `Action` не был добавлен тип, возвращаемый из функции `actionUpdate`. Добавил экспорт этого типа аналогично другим в `Action`.
