@@ -865,7 +865,7 @@ function renderVoteSlide(data) {
       <button class="voting-layout__button voting-layout__button_prev" type="button" ${
     offset <= 0 ? `disabled` : ``
   } aria-label="Предыдущие кандидаты" data-action="update" data-params=${actionParamsPrev}>
-        <svg width="64" height="64" class="inline-icon__icon">
+        <svg width="64" height="64">
           <use xlink:href="#button"></use>
         </svg>
       </button>
@@ -883,7 +883,7 @@ function renderVoteSlide(data) {
       <button class="voting-layout__button voting-layout__button_next" type="button" ${
     offset + candidatesNumber >= data.users.length ? `disabled` : ``
   } aria-label="Следующие кандидаты" data-action="update" data-params=${actionParamsNext}>
-        <svg width="64" height="64" class="inline-icon__icon">
+        <svg width="64" height="64">
           <use xlink:href="#button"></use>
         </svg>
       </button>
@@ -1625,6 +1625,8 @@ window.renderTemplate = function(alias, data) {
 
   savedSlideName = alias;
   savedSlideData = data;
+
+  setTimeout(window.postRenderScript(savedSlideName, savedSlideData), 1000);
 
   return `
     <main class="slide slide_${alias}">
