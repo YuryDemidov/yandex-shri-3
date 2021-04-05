@@ -8,8 +8,13 @@ import {
     actionSetTheme,
 } from './application/actions';
 import { createState } from './application/state';
-import { createCurrentDataSelector, createCurrentIndexSelector, createProgressSelector, createThemeSelector } from './application/selectors';
-import { initIframe, initProgress, sendMessage, setElementTheme, setScale } from './application/view';
+import {
+    createCurrentDataSelector,
+    createCurrentIndexSelector,
+    createProgressSelector,
+    createThemeSelector
+} from './application/selectors';
+import {initIframe, initProgress, sendMessage, setElementTheme, setScale} from './application/view';
 
 import './index.css';
 

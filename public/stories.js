@@ -1626,7 +1626,7 @@ window.renderTemplate = function(alias, data) {
   savedSlideName = alias;
   savedSlideData = data;
 
-  setTimeout(window.postRenderScript(savedSlideName, savedSlideData), 1000);
+  setTimeout(() => window.postRenderScript(savedSlideName, savedSlideData));
 
   return `
     <main class="slide slide_${alias}">
